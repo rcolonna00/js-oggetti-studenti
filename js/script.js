@@ -20,7 +20,13 @@ for ( var key in classe ) {
 };
 
 //ESERCIZIO 2
-for ( var key in classe.nome ) {
+// for ( var i = 0; i < classe.lenght; i++ ) {
+    
+//     console.log(classe[i])
+    
+// };
+
+ for ( var key in classe.nome ) {
     console.log(classe.nome[key])
 };
 
@@ -32,4 +38,18 @@ for ( var key in classe.eta ) {
     console.log(classe.eta[key])
 };
 
-console.log( "L'alunno/a " + classe.nome[key] + ' ' + classe.cognome[key] + ' ha ' + classe.eta[key] + ' anni' )
+console.log( "L'alunno/a " + classe.nome[key] + ' ' + classe.cognome[key] + ' ha ' + classe.eta[key] + ' anni' );
+
+//ESERCIZIO 3
+
+var nuovoNome = prompt('Dimmi il tuo nome')
+classe.nome.push(nuovoNome);
+console.log(classe.nome)
+
+var nuovoCognome = prompt('Dimmi il tuo cognome')
+classe.cognome.push(nuovoCognome);
+console.log(classe.cognome)
+
+var nuovoEta = prompt('Dimmi la tua età')
+classe.eta.push(nuovoEta);
+console.log(classe.eta)
