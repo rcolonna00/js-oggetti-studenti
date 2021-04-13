@@ -1,55 +1,70 @@
 // Descrizione:
 // 1 Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 // Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
-// Creare un array di oggetti di studenti.
 
-// 2 Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
+// 2 Creare un array di oggetti di studenti.
+// Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 
 // 3 Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente 
 // inserendo nell’ordine: nome, cognome e età.
 
 //ESERCIZIO 1
-var classe = {
-    'nome' : ['Angelo', 'Marco', 'Anna', 'Francesca'],
-    'cognome' : ['Mansueto', 'Costa', 'Tinelli', 'Campanella'],
-    'eta' : ['21', '25', '22', '24']
-}
+// var studenti = [
+//     {
+//         'nome': 'Angelo',
+//         'cognome': 'Mansueto',
+//         'eta': 21
+//     }
+// ];
 
-for ( var key in classe ) {
-    console.log(classe[key])
-};
-
-//ESERCIZIO 2
-// for ( var i = 0; i < classe.lenght; i++ ) {
-    
-//     console.log(classe[i])
-    
+// for ( var key in studenti ) {
+//     console.log(studenti)
 // };
 
- for ( var key in classe.nome ) {
-    console.log(classe.nome[key])
-};
+// for( var i = 0; i < studenti.length; i++ ) {
+//     studentiI = studenti[i];
+//     console.log(studentiI);
+// };
 
-for ( var key in classe.cognome ) {
-    console.log(classe.cognome[key])
-};
+//ESERCIZIO 2
+var arrayStudenti = [
+    {
+        'nome': 'Angelo',
+        'cognome': 'Mansueto',
+        'eta': 21
+    },
+    {
+        'nome': 'Marco',
+        'cognome': 'Costa',
+        'eta': 25
+    },
+    {
+        'nome': 'Anna',
+        'cognome': 'Tinelli',
+        'eta': 22
+    },
+    {
+        'nome': 'Francesca',
+        'cognome': 'Campanella',
+        'eta': 24
+    }
+];
 
-for ( var key in classe.eta ) {
-    console.log(classe.eta[key])
+for ( var j = 0; j < arrayStudenti.length; j++ ) {
+    var arrayStudentiJ = arrayStudenti[j];
+    console.log( 'Nome: ' + arrayStudentiJ.nome + ' Cognome: ' + arrayStudentiJ.cognome )
 };
-
-console.log( "L'alunno/a " + classe.nome[key] + ' ' + classe.cognome[key] + ' ha ' + classe.eta[key] + ' anni' );
 
 //ESERCIZIO 3
+var nuovoNome = prompt('Dimmi il tuo nome');
+var nuovoCognome = prompt('Dimmi il tuo cognome');
+var nuovoEta = parseInt( prompt('Dimmi la tua età') );
 
-var nuovoNome = prompt('Dimmi il tuo nome')
-classe.nome.push(nuovoNome);
-console.log(classe.nome)
+var nuovoStudente = {
+    'nome': nuovoNome,
+    'cognome': nuovoCognome,
+    'eta': nuovoEta
+}
 
-var nuovoCognome = prompt('Dimmi il tuo cognome')
-classe.cognome.push(nuovoCognome);
-console.log(classe.cognome)
-
-var nuovoEta = prompt('Dimmi la tua età')
-classe.eta.push(nuovoEta);
-console.log(classe.eta)
+arrayStudenti.push(nuovoStudente);
+console.log(arrayStudenti)
